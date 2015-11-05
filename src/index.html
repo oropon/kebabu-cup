@@ -6,7 +6,14 @@
   </head>
   <body>
     <div id="app">
-
+      <input @keyup.enter="submit" v-model="newMember">
+      <ul>
+        <li v-for="member in members" :class="'team'+member.team" @click="remove(member)">
+          <p v-text="member.name"></p>
+        </li>
+      </ul>
+      <button @click="group">GROUP</button>
+      <button @click="sort">SORT</button>
     </div>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="underscore.js"></script>
