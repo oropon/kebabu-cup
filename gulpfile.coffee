@@ -43,7 +43,7 @@ gulp.task 'webserver', ->
   gulp.src './dist/'
     .pipe webserver(
       livereload: true
-      port: 8080
+      port: 8888
       fallback: 'index.html'
       open: true
     )
